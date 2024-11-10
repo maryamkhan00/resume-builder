@@ -48,26 +48,3 @@ document.getElementById("resumeForm")?.addEventListener("submit", function (even
 document.getElementById("pdf")?.addEventListener("click", function () {
     window.print();
 });
-
-// Prefill form if username exists in URL
-window.addEventListener("DOMContentLoaded", () => {
-    let urlParams = new URLSearchParams(window.location.search);
-    let username = urlParams.get("username");
-
-    if (username) {
-        let savedResumeData = localStorage.getItem(username);
-        if (savedResumeData) {
-            let resumeData = JSON.parse(savedResumeData);
-            (document.getElementById("firstName") as HTMLInputElement).value = resumeData.firstName;
-            (document.getElementById("lastName") as HTMLInputElement).value = resumeData.lastName;
-            (document.getElementById("email") as HTMLInputElement).value = resumeData.email;
-            (document.getElementById("phone") as HTMLInputElement).value = resumeData.phone;
-            (document.getElementById("qualification") as HTMLSelectElement).value = resumeData.qualification;
-            (document.getElementById("institute") as HTMLInputElement).value = resumeData.institute;
-            (document.getElementById("major") as HTMLInputElement).value = resumeData.major;
-            (document.getElementById("duration") as HTMLInputElement).value = resumeData.duration;
-            (document.getElementById("skills") as HTMLTextAreaElement).value = resumeData.skills;
-            (document.getElementById("experience") as HTMLTextAreaElement).value = resumeData.experience;
-        }
-    }
-});
