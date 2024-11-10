@@ -75,6 +75,9 @@ button:hover{
     .main {
         flex-direction: column; 
     }
+    .profile-pic{
+        border-radius: 100px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -89,5 +92,8 @@ button:hover{
     button {
         width: 100%; 
         padding: 8px;
+    }
+    .profile-pic{
+        border-radius: 100px;
     }
 }
