@@ -48,3 +48,4 @@ document.getElementById("resumeForm")?.addEventListener("submit", function (even
 document.getElementById("pdf")?.addEventListener("click", function () {
     window.print();
 });
+
