@@ -56,3 +56,38 @@ button:hover{
     background-color: rgb(18, 121, 112);
     
 }
+
+@media (max-width: 768px) {
+    .overview, .centre {
+        width: 100%; 
+        border: none; 
+    }
+
+    .overview {
+        padding: 10px;
+        border-bottom: 2px solid #000; 
+    }
+
+    .centre {
+        padding: 10px;
+    }
+
+    .main {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 480px) {
+    .overview, .centre {
+        padding: 5px; 
+    }
+
+    .profile-pic {
+        height: 80px;
+    }
+
+    button {
+        width: 100%; 
+        padding: 8px;
+    }
+}
