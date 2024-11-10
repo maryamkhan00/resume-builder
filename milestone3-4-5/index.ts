@@ -12,23 +12,6 @@ document.getElementById("resumeForm")?.addEventListener("submit", function (even
     let skills = (document.getElementById("skills") as HTMLTextAreaElement).value;
     let experience = (document.getElementById("experience") as HTMLTextAreaElement).value;
 
-let username:string = `${firstName}_${lastName}`    
-
-//saving data
-let resumeData = {
-    firstName: firstName,
-    lastName: lastName,
-    email: email,
-    phone: phone,
-    qualification: qualification,
-    institute: institute,
-    major: major,
-    duration: duration,
-    skills: skills,
-    experience: experience,
-};
-localStorage.setItem(username, JSON.stringify(resumeData));
-
     let resumeDiv = document.getElementById("resume");
     if (resumeDiv) {
         resumeDiv.innerHTML = `
@@ -48,8 +31,7 @@ localStorage.setItem(username, JSON.stringify(resumeData));
         resumeDiv.style.display = "block";
 
         //unique link
-        let milestone345Path = `${window.location.origin}/milestone3-4-5/`;
-        let shareableURL = `${milestone345Path}?username=${encodeURIComponent(firstName+lastName)}`;
+        let shareableURL = `${window.location.origin}?username=${encodeURIComponent(firstName+lastName)}`;
         let link = document.getElementById("link") as HTMLAnchorElement;
         let share = document.getElementById("share") as HTMLDivElement;
 
@@ -64,27 +46,5 @@ document.getElementById("pdf")?.addEventListener("click", function () {
     window.print();
 });
 
-// Prefill form if username exists in URL
-window.addEventListener("DOMContentLoaded", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const username = urlParams.get("username");
-
-    if (username) {
-        const savedResumeData = localStorage.getItem(username);
-        if (savedResumeData) {
-            const resumeData = JSON.parse(savedResumeData);
-            (document.getElementById("firstName") as HTMLInputElement).value = resumeData.firstName;
-            (document.getElementById("lastName") as HTMLInputElement).value = resumeData.lastName;
-            (document.getElementById("email") as HTMLInputElement).value = resumeData.email;
-            (document.getElementById("phone") as HTMLInputElement).value = resumeData.phone;
-            (document.getElementById("qualification") as HTMLSelectElement).value = resumeData.qualification;
-            (document.getElementById("institute") as HTMLInputElement).value = resumeData.institute;
-            (document.getElementById("major") as HTMLInputElement).value = resumeData.major;
-            (document.getElementById("duration") as HTMLInputElement).value = resumeData.duration;
-            (document.getElementById("skills") as HTMLTextAreaElement).value = resumeData.skills;
-            (document.getElementById("experience") as HTMLTextAreaElement).value = resumeData.experience;
-        }
-    }
-});
     
 
