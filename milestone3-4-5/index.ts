@@ -14,21 +14,6 @@ document.getElementById("resumeForm")?.addEventListener("submit", function (even
 
     let username:string = `${firstName}_${lastName}`
 
-    //saving data
-    let resumeData = {
-        firstName,
-        lastName,
-        email,
-        phone,
-        qualification,
-        institute,
-        major,
-        duration,
-        skills,
-        experience,
-    };
-    localStorage.setItem(username, JSON.stringify(resumeData));
-
     let resumeDiv = document.getElementById("resume");
     if (resumeDiv) {
         resumeDiv.innerHTML = `
@@ -66,8 +51,8 @@ document.getElementById("pdf")?.addEventListener("click", function () {
 
 // Prefill form if username exists in URL
 window.addEventListener("DOMContentLoaded", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const username = urlParams.get("username");
+    let urlParams = new URLSearchParams(window.location.search);
+    let username = urlParams.get("username");
 
     if (username) {
         let savedResumeData = localStorage.getItem(username);
