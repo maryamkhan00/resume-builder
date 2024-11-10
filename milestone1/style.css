@@ -42,7 +42,7 @@
     color: white;
 }
 
-.objective h1, .projects h1, .projects h2, .courses h1, .extracurriculars h1, .extracurriculars h2, .experience h1{
+.objective h1, .projects h1, .projects h2, .courses h1, .extracurricurals h1, .extracurricurals h2, .experience h1{
     text-decoration: underline;
     color: rgb(76, 124, 126);
 }
