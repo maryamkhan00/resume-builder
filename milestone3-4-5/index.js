@@ -11,14 +11,13 @@ var _a, _b;
     var duration = document.getElementById("duration").value;
     var skills = document.getElementById("skills").value;
     var experience = document.getElementById("experience").value;
-    var username = "".concat(firstName, "_").concat(lastName);
     var resumeDiv = document.getElementById("resume");
     if (resumeDiv) {
         resumeDiv.innerHTML = "\n            <h2> <span contenteditable=\"true\">".concat(firstName, "</span> <span contenteditable=\"true\">").concat(lastName, "</span></h2>\n            <p><strong>Email:</strong> <span contenteditable=\"true\"> ").concat(email, " </span></p>\n            <p><strong>Phone:</strong> <span contenteditable=\"true\"> ").concat(phone, " </span></p>\n            <h3>Education</h3>\n            <p><strong>Qualification:</strong> <span contenteditable=\"true\"> ").concat(qualification, " </span></p>\n            <p><strong>Institute:</strong> <span contenteditable=\"true\"> ").concat(institute, " </span></p>\n            <p><strong>Major:</strong> <span contenteditable=\"true\"> ").concat(major, " </span></p>\n            <p><strong>Duration:</strong> <span contenteditable=\"true\"> ").concat(duration, " </span></p>\n            <h3>Skills</h3>\n            <p contenteditable=\"true\">").concat(skills, "</p>\n            <h3>Experience</h3>\n            <p contenteditable=\"true\">").concat(experience, "</p>\n        ");
         resumeDiv.style.display = "block";
         //unique link
         var milestone345Path = "".concat(window.location.origin, "/milestone3-4-5/");
-        var shareableURL = "".concat(milestone345Path, "?username=").concat(encodeURIComponent(username));
+        var shareableURL = "".concat(milestone345Path, "?username=").concat(encodeURIComponent(firstName + lastName));
         var link = document.getElementById("link");
         var share = document.getElementById("share");
         share.style.display = "block";
