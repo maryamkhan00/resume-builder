@@ -1,0 +1,140 @@
+* {
+    margin: 0% ;
+    border:  0% ;
+}
+
+body {
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+h1{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+legend {
+    font-size: 20px;
+    color: cadetblue;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: rosybrown;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 97%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid burlywood;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: burlywood;
+    background-color: cadetblue;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: rgb(58, 96, 97);
+}
+
+.resume {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+}
+
+.resume h2 {
+    color: cadetblue;
+    margin-bottom: 5px;
+}
+
+.resume h3 {
+    color: rosybrown;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.resume p {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 760px) {
+    .form, .resume {
+        padding: 30px;
+    }
+
+    input, select, textarea, button {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .resume h2 {
+        font-size: 25px;
+    }
+
+    .resume h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px){
+    .form, .resume {
+        padding: 15px;
+    }
+
+    input, select, textarea, button {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .resume h2 {
+        font-size: 15px;
+    }
+
+    .resume h3 {
+        font-size: 13px;
+    }
+}

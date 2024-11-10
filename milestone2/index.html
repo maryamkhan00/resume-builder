@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Generate Your Own Resume</h1>
+    <div class="form">
+        <form method="post" action="crystal1468592@gmail.com" id="resumeForm">
+
+            <fieldset>
+
+                <legend>Personal Information:</legend>
+
+                <label>First Name</label>
+                <p><input type="text" name="first name" placeholder="ex: Maryam" id="firstName" required/></p>
+
+                <label>Last Name</label>
+                <p><input type="text" name="last name" placeholder="ex: Khan" id="lastName" required/></p>
+
+                <label>Email</label>
+                <p><input type="email" name="email" placeholder="ex: maryam@gmail.com" id="email" required/></p>
+
+                <label>Phone Number</label>
+                <p><input type="text" name="phone number" placeholder="12345678900" id="phone" /></p>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Education:</legend>
+
+                <label>Highest Qualification</label>
+                <select id="qualification" required>
+                    <option>Bachelors</option>
+                    <option>Intermediate</option>
+                    <option>Matriculation</option>
+                    <option>Masters</option>
+                    <option>PHD</option>
+                </select><br/>
+
+                <label>Institute name</label>
+                <p><input type="text" name="institute" placeholder="Ned University" id="institute" required/></p>
+
+                <label>Major/Field of Study</label>
+                <p><input type="text" name="major" placeholder="Economics and Finance" id="major" required/></p>
+
+                <label>Duration</label>
+                <p><input type="text" name="duration" placeholder="2023-ongoing" id="duration" /></p>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Skills:</legend>
+                <textarea placeholder="HTML, CSS, TypeScript, NextJS, Git etc."  rows="4" id="skills" required></textarea>
+
+             </fieldset>
+
+             <fieldset>
+
+                <legend>Experience:</legend>
+                <textarea placeholder="I am an experienced..." rows="10" id="experience" required ></textarea>
+
+             </fieldset>
+
+             <button type="submit"><b>Generate Resume</b></button>
+
+        </form>
+    </div>
+    <div class="resume" id="resume">
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
