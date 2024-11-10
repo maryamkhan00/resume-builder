@@ -9,7 +9,7 @@
 <body>
     <h1>Generate Your Own Resume</h1>
     <div class="form">
-        <form method="post" action="crystal1468592@gmail.com" id="resumeForm">
+        <form method="post" action="mailto: crystal1468592@gmail.com" id="resumeForm">
 
             <fieldset>
 
@@ -71,9 +71,17 @@
 
         </form>
     </div>
-    <div class="resume" id="resume">
+    <div class="resume" id="resume" contenteditable="true">
 
     </div>
+    <br/>
+    <div id="share" class="share" style="display: none;">
+        <h2>Share your resume with others</h2>
+        <p><b>You can view and edit or simply share your resume using this link: </b></p>
+        <a href="#" id="link" target="_blank"></a>
+        <br>
+        <button id="pdf"><b>Download as PDF</b></button>
+     </div>
     <script src="./index.js"></script>
 </body>
 </html>

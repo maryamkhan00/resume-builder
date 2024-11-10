@@ -16,7 +16,7 @@ h1{
     margin-bottom: 20px;
 }
 
-.form {
+.form{
     width: 100%;
     max-width: 600px;
     background-color: white;
@@ -69,7 +69,7 @@ button:hover {
     background-color: rgb(58, 96, 97);
 }
 
-.resume {
+.resume, .share {
     display: none;
     width: 100%;
     max-width: 600px;
@@ -79,7 +79,7 @@ button:hover {
     box-shadow: 0 0 10px black;
 }
 
-.resume h2 {
+.resume h2, .share h2{
     color: cadetblue;
     margin-bottom: 5px;
 }
@@ -90,13 +90,13 @@ button:hover {
     margin-bottom: 5px;
 }
 
-.resume p {
+.resume p, .share p{
     color: gray;
     margin-bottom: 10px;
 }
 
 @media (max-width: 760px) {
-    .form, .resume {
+    .form, .resume, .share{
         padding: 30px;
     }
 
@@ -108,17 +108,17 @@ button:hover {
         font-size: 28px;
     }
 
-    .resume h2 {
+    .resume h2, .share h2 {
         font-size: 25px;
     }
 
-    .resume h3 {
+    .resume h3, .share p {
         font-size: 20px;
     }
 }
 
 @media (max-width: 480px){
-    .form, .resume {
+    .form, .resume, .share {
         padding: 15px;
     }
 
@@ -130,11 +130,11 @@ button:hover {
         font-size: 20px;
     }
 
-    .resume h2 {
+    .resume h2, .share h2 {
         font-size: 15px;
     }
 
-    .resume h3 {
+    .resume h3, .share p {
         font-size: 13px;
     }
 }
